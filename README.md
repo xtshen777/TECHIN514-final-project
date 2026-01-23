@@ -1,78 +1,88 @@
-# Personal Safety Detector & Alarm
+# Desk Emotion Indicator
 
 ## 1. Project overview
 
-### Title  
-Personal Safety Detector & Alarm
+### Desk Emotion Indicator 
+Cat-Ear Headband–based PPG Emotion Sensing System
 
 ### What it does  
-The Personal Safety Detector & Alarm is a pattern-based proximity sensing for night and outdoor use. It is wearable two-device system that supports personal safety awareness by detecting potential following behavior based on distance change patterns rather than identity or location tracking. It is designed for situations such as walking alone at night or hiking on isolated trails, and mainly focuses on female using group. A wearable sensing module on the backpack monitors distance and motion patterns behind the user. A wrist-worn gauge translates these patterns into a calm, analog safety awareness display.
+The Desk Emotion Indicator is a two device system that uses a cat ear headband to measure heart related signals at the temples and a desk display with a mechanical gauge needle to visualize emotional trends from relaxed to stressed. The system is designed for desk based study or work, giving a calm and glanceable reflection of emotional state rather than exact numbers.
 
 ### General Sketch  
 ![Personal Safety Detector & Alarm Sketch](images/general_sketch.jpg)
-The system has two main physical pieces. The sensing device clips onto the top of a backpack strap or jacket collar facing backwards. It contains a rear-facing distance sensor, an IMU, a small processor board, battery and power switch inside a compact enclosure. The display device is worn on the wrist like a watch. It contains a small mechanical gauge needle driven by a stepper motor, several status LEDs and a single button for reset or acknowledge, all inside a wrist strap enclosure.
+The sensing device is a cat shaped headband with two wide side sections that gently cover and touch the temple areas. A PPG sensor module is embedded inside each wide section so that the optical window rests against the skin, with soft foam pads and light blocking rings for comfort and signal quality. The cat ears on top of the headband are slightly thickened and used to hide the PCB, ESP32 based microcontroller and battery, as well as to route and organize the sensor wiring.
+
+The display device is a small desk unit that looks like a vintage analog meter. It has a mechanical gauge needle driven by a stepper motor to show a continuous emotional state from relaxed to tense, a row of LEDs below the gauge as a secondary indication and a single reset or acknowledge button. The desk unit receives processed heart rate features wirelessly from the headband and updates the gauge and LEDs smoothly.
 
 ---
 
-## 2. Sensing device
+## 2. Sensor device (cat ear headband)
 
 ### Concept and placement  
 ![Sensor Device](images/sensor_sketch.jpg)
-The sensing device is a small module attached to the back side of the backpack strap or jacket collar, facing backward. It continuously measures how far objects are behind the user and how this distance changes over time. The device also includes a red LED and a buzzer to provide immediate local feedback when a high-risk pattern is detected.
+The sensor device is a cat ear headband that integrates PPG sensing modules at the temple positions. The headband sides are widened in the region that covers the temples to create space for the PPG boards and to provide a larger, more comfortable contact surface. On the inner side, soft foam pads and a small dark ring around each PPG window help maintain gentle pressure, reduce ambient light and improve signal quality. The cat ears on top of the headband are used as a functional enclosure that hides the main PCB, ESP32 module and battery, while also serving as a playful form language.
 
 ### Electronics and part numbers  
-Planned parts for the sensing device include:
+Planned parts for the sensor device include:
 
 - Processor and wireless  
-  - Seeed XIAO ESP32C3 (ESP32-C3 based MCU with BLE)  
-- Distance sensor  
-  - ST VL53L1X Time-of-Flight distance sensor module  
-- Motion sensor  
-  - ST LSM6DS3 6-axis IMU (3-axis accelerometer and 3-axis gyroscope) 
-- Alert and feedback components 
-  - Active piezo buzzer, 3 V to 5 V
-  - Red LED, 3 mm
-  - Current-limiting resistor for LED (220 Ω to 330 Ω) 
+  - Seeed Studio XIAO ESP32C3 (ESP32 C3 based MCU with BLE)
+
+- Optical heart sensor  
+  - MAX30102 pulse oximeter and heart rate sensor module  
+    - PPG sensing for heart rate and heart rate variability features  
+  - Initially one MAX30102 module at one temple for prototyping, with the option to extend to both sides later
+
 - Power  
   - 3.7 V LiPo battery, about 500 mAh  
   - TP4056 LiPo charger module  
-  - Power switch  
-- Other  
-  - Custom PCB for sensor and power connections  
-  - Simple plastic enclosure that mounts on backpack or collar
+  - Power switch
+
+- Mechanical and wiring  
+  - Cat ear headband shell with widened temple sections  
+  - Soft foam or silicone pads around each sensor window  
+  - Flexible wires routed inside the headband structure  
+  - Custom small PCB in one cat ear that connects MAX30102, XIAO ESP32C3, battery and charger
 
 ### How it works  
-The VL53L1X Time-of-Flight sensor continuously measures distance changes behind the user, while the LSM6DS3 IMU tracks the user’s motion state such as walking, stopping, or changing speed. The ESP32C3 processes both sensor streams and runs pattern detection to identify sustained distance correlation that may indicate potential following behavior.
-
-When the computed awareness level exceeds a predefined threshold, the device activates a red LED and a buzzer to provide immediate local warning feedback. At the same time, awareness level data is transmitted via BLE to the wrist-worn display for calm, continuous visualization.
+The MAX30102 module in the temple section emits light into the skin and measures the reflected light signal that changes with blood volume. The Seeed XIAO ESP32C3 reads raw PPG samples over I2C, applies basic filtering and peak detection and computes heart rate and short term heart rate variability features over a sliding time window. Instead of sending raw signals, the headband computes compact emotional features such as smoothed heart rate and an HRV based stress score and periodically transmits these features via BLE to the desk display device. The headband is designed for stable contact during desk work, avoiding hand and wrist motion artifacts.
 
 ---
 
-## 3. Display device
+## 3. Display device (desk gauge)
 
 ### Concept and placement  
 ![Display Device](images/display_sketch.jpg)
-The display device is worn on the user’s wrist, similar to a watch. It provides a quick, glanceable indication of current safety awareness level. The main interface is a mechanical gauge needle that moves smoothly between calm and high awareness. A row of small LEDs and a single button give simple additional interaction.
+The display device is a compact desk unit that turns the incoming physiological features into a physical gauge and subtle light feedback. The main element is a mechanical needle gauge that moves smoothly between relaxed and stressed states. Below the gauge, a horizontal row of LEDs provides a secondary visualization that lights up more segments as the user becomes more tense. A single tactile button on the front allows the user to reset or acknowledge the current state or recalibrate the baseline.
 
 ### Electronics and part numbers  
 Planned parts for the display device include:
 
 - Processor and wireless  
-  - Seeed XIAO ESP32C3 (second board, acting as BLE central and display controller)  
-- Gauge and indicators  
-  - 28BYJ-48 stepper motor with ULN2003 driver board, used to move the gauge needle  
-  - Four 3 mm LEDs for low, medium and high awareness indication  
-  - One momentary tactile push button for reset or mode control  
+  - Seeed Studio XIAO ESP32C3 (second board, acting as BLE central and display controller)
+
+- Mechanical gauge  
+  - 28BYJ 48 stepper motor  
+  - ULN2003 stepper motor driver board
+
+- Visual indicators  
+  - LEDs, green, yellow and red or several identical color LEDs  
+  - Current limiting resistors for each LED (for example 220 Ω to 330 Ω)
+
+- User input  
+  - One momentary tactile push button for reset or acknowledge
+
 - Power  
-  - 3.7 V LiPo battery, about 500 mAh  
+  - 3.7 V LiPo battery, about 1000 mAh  
   - TP4056 LiPo charger module  
-  - Power switch  
-- Other  
-  - Custom PCB for stepper driver, LEDs, button and power distribution  
-  - Wrist strap enclosure that holds the gauge face and electronics
+  - Power switch
+
+- Mechanical  
+  - Custom enclosure designed to sit on a desk and support the gauge dial  
+  - Custom PCB that connects XIAO ESP32C3, ULN2003, LEDs, button and power components
 
 ### How it works  
-The wrist device receives awareness level messages over BLE from the sensing module. The XIAO ESP32C3 on the display side maps the awareness level to a needle position and drives the 28BYJ-48 stepper motor through the ULN2003 driver to move the gauge smoothly. LEDs turn on to show low, medium or high awareness bands, while the button lets the user acknowledge an event or temporarily reset the gauge. The device is designed to remain visually calm and avoid flashing or loud alerts.
+The desk device acts as a BLE central and listens for periodic data packets from the headband sensor device. When it receives new heart rate and HRV based features, the XIAO ESP32C3 maps the emotional state score to a target gauge angle and LED pattern. The microcontroller drives the ULN2003 board to step the 28BYJ 48 motor to the new angle in a smooth way to avoid sudden jumps. The LEDs under the gauge are updated to indicate low, medium or high stress zones. The reset button allows the user to set a new baseline or clear a previously high state. The display is intentionally quiet and uses only motion and soft light to keep the feedback calm and ambient.
 
 ---
 
@@ -80,32 +90,42 @@ The wrist device receives awareness level messages over BLE from the sensing mod
 
 ### 4.1 High level system diagram
 ![Display Device](images/system_diagram.png)
-- User wearing backpack and wrist gauge  
-- Rear-facing sensing module on backpack strap  
-- Wrist-worn gauge on arm  
-- BLE wireless link between sensing module and wrist gauge  
+- User sitting at a desk wearing the cat ear headband  
+- The cat ear headband labeled as "Sensor device" with temple based PPG sensing  
+- The desk gauge unit labeled as "Display device" with needle, LEDs and button  
+- A BLE wireless link between headband and desk gauge  
 
 ### 4.2 Detailed data flow diagram (figure 2)
 ![Display Device](images/detailed_diagram.png) 
 
-Sensor level pipeline  
+Sensor device pipeline (headband):
 
-VL53L1X distance readings  
-+ LSM6DS3 accelerometer and gyroscope readings  
-→ XIAO ESP32C3 sensing firmware  
-  - filtering and pre-processing  
-  - pattern detection for following behavior  
-  - awareness score computation (for example 0 to 100)  
-→ BLE packet with awareness score and status flags  
+- MAX30102 PPG module at temple  
+  - Raw optical signal samples  
+- XIAO ESP32C3 sensing firmware  
+  - I2C data acquisition  
+  - Filtering and baseline removal  
+  - Peak detection for heart beats  
+  - Heart rate and HRV feature computation  
+  - Emotional trend score calculation  
+- BLE packet  
+  - Contains heart rate, HRV features and an emotional score  
 
-Display level pipeline  
+Display device pipeline (desk gauge):
 
-BLE central on wrist XIAO ESP32C3 receives packet  
-→ maps awareness score to gauge angle and LED states  
-→ stepper motor driver (ULN2003) moves 28BYJ-48 motor  
-→ gauge needle position updated  
-→ LEDs show low, medium or high band  
-→ user reads wrist gauge at a glance
+- BLE central on desk XIAO ESP32C3  
+  - Receives packets from the headband  
+- Mapping logic  
+  - Map emotional score to gauge angle range  
+  - Map emotional score to LED band states  
+- Stepper control  
+  - XIAO ESP32C3 generates step signals  
+  - ULN2003 driver powers 28BYJ 48 motor  
+  - Gauge needle moves to new angle  
+- LED and user interface  
+  - LEDs show low, medium or high emotional bands  
+  - User can press the reset button to set a new baseline or acknowledge a high state  
+
 
 ---
 
@@ -114,11 +134,13 @@ BLE central on wrist XIAO ESP32C3 receives packet
 All component datasheets used in this project are available in the `datasheets/` folder:
 
 - [Seeed XIAO ESP32C3](datasheets/Seeed_XIAO_ESP32C3.pdf)
-- [VL53L1X Time-of-Flight sensor](datasheets/VL53L1X_ToF_sensor.pdf)
-- [LSM6DS3 IMU](datasheets/LSM6DS3_IMU.pdf)
+- [MAX30102 PPG Sensor](datasheets/VL53L1X_ToF_sensor.pdf)
 - [28BYJ-48 Stepper Motor](datasheets/28BYJ48_stepper_motor.pdf)
 - [ULN2003 Driver](datasheets/ULN2003_driver.pdf)
 - [TP4056 Charger](datasheets/TP4056_charger.pdf)
-- [Piezo Buzzer](datasheets/Piezo_buzzer.pdf)
+- [LiPo Battery](datasheets/LiPo_battery.pdf)
+- [Tactile Switch](datasheets/tactile_switch.pdf)
+- [NeoPixel Digital RGB LED Strip](datasheets/NeoPixel_LED.pdf)
+
 
 
