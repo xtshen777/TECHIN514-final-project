@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/luciashen/Desktop/TECHIN 514 final project/pcb_design/techin514_final_sensor_pcb/techin514_final_sensor_pcb.kicad_sch</source>
+    <date>2026-01-26T21:00:43-0800</date>
+    <tool>Eeschema 9.0.6</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>techin514_final_sensor_pcb.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>C</value>
+      <datasheet>~</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5576880a-501e-436a-a8f6-16b5688734bc</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>C</value>
+      <datasheet>~</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fb4db373-99af-45dd-a03e-b365bea0fd86</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>C</value>
+      <datasheet>~</datasheet>
+      <description>Unpolarized capacitor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f27ca7c9-51c7-402d-9bf1-8ab76bb8510b</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <datasheet>~</datasheet>
+      <description>Light emitting diode</description>
+      <fields>
+        <field name="Sim.Pins">1=K 2=A</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Light emitting diode</field>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sim.Pins" value="1=K 2=A"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>16a253f6-486b-4631-b3aa-4ebe0ad5ae9b</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>NeoPixel Digital RGB LED</value>
+      <footprint>LED_SMD:LED_WS2812_PLCC6_5.0x5.0mm_P1.6mm</footprint>
+      <datasheet>http://www.inolux-corp.com/datasheet/SMDLED/Addressable%20LED/IN-PI556FCH.pdf</datasheet>
+      <description>5050 RGB LED 6-Pin with integrated IC</description>
+      <fields>
+        <field name="Footprint">LED_SMD:LED_WS2812_PLCC6_5.0x5.0mm_P1.6mm</field>
+        <field name="Datasheet">http://www.inolux-corp.com/datasheet/SMDLED/Addressable%20LED/IN-PI556FCH.pdf</field>
+        <field name="Description">5050 RGB LED 6-Pin with integrated IC</field>
+      </fields>
+      <libsource lib="LED" part="Inolux_IN-PI556FCH" description="5050 RGB LED 6-Pin with integrated IC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="RGB LED NeoPixel addressable"/>
+      <property name="ki_fp_filters" value="LED*WS2812*PLCC*5.0x5.0mm*P1.6mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8805bf0d-ceb3-43c7-b80b-f0511330fc94</tstamps>
+    </comp>
+    <comp ref="M1">
+      <value>Stepper_Motor_bipolar</value>
+      <datasheet>http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0</datasheet>
+      <description>4-wire bipolar stepper motor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0</field>
+        <field name="Description">4-wire bipolar stepper motor</field>
+      </fields>
+      <libsource lib="Motor" part="Stepper_Motor_bipolar" description="4-wire bipolar stepper motor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="bipolar stepper motor"/>
+      <property name="ki_fp_filters" value="PinHeader*P2.54mm*Vertical* TerminalBlock* Motor*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f6832ea9-835e-4164-8a81-d92e0f21a58b</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>R</value>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6d8372e1-f718-45cf-8a66-b82fcbd1872f</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>R</value>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>584a43d4-e674-4668-9f41-70a5dd2c39cc</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>R</value>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6bc90cb7-5022-4ab6-b460-cbbed7a0b4b1</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>R</value>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>acbf8b0f-2fd9-43c8-b63b-925ea8c93642</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>R</value>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8b99f165-debc-4561-bc98-62bfbd477aa0</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>R</value>
+      <datasheet>~</datasheet>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7c04f42d-3b69-4b09-a306-32747e0944b1</tstamps>
+    </comp>
+    <comp ref="S1">
+      <value>SWITCH</value>
+      <datasheet>https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Switches</datasheet>
+      <description>Voltage controlled switch symbol for simulation only</description>
+      <fields>
+        <field name="Sim.Device">SW</field>
+        <field name="Sim.Type">V</field>
+        <field name="Sim.Params">thr=0 ron=1</field>
+        <field name="Sim.Pins">1=no+ 2=no- 3=ctrl+ 4=ctrl-</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Switches</field>
+        <field name="Description">Voltage controlled switch symbol for simulation only</field>
+      </fields>
+      <libsource lib="Simulation_SPICE" part="SWITCH" description="Voltage controlled switch symbol for simulation only"/>
+      <property name="Sim.Device" value="SW"/>
+      <property name="Sim.Type" value="V"/>
+      <property name="Sim.Params" value="thr=0 ron=1"/>
+      <property name="Sim.Pins" value="1=no+ 2=no- 3=ctrl+ 4=ctrl-"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="simulation"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1f646741-80ed-4bea-8c94-bbfefaa5a21a</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>MAX30102</value>
+      <footprint>OptoDevice:Maxim_OLGA-14_3.3x5.6mm_P0.8mm</footprint>
+      <datasheet>https://datasheets.maximintegrated.com/en/ds/MAX30102.pdf</datasheet>
+      <description>Heart Rate Sensor, 14-OLGA</description>
+      <fields>
+        <field name="Footprint">OptoDevice:Maxim_OLGA-14_3.3x5.6mm_P0.8mm</field>
+        <field name="Datasheet">https://datasheets.maximintegrated.com/en/ds/MAX30102.pdf</field>
+        <field name="Description">Heart Rate Sensor, 14-OLGA</field>
+      </fields>
+      <libsource lib="Sensor" part="MAX30102" description="Heart Rate Sensor, 14-OLGA"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="Heart Rate"/>
+      <property name="ki_fp_filters" value="Maxim*OLGA*3.3x5.6mm*P0.8mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9032b75f-beb4-47fa-98e6-16beefcdb17a</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>MOUDLE-SEEEDUINO-XIAO-ESP32C3</value>
+      <footprint>MOUDLE14P-SMD-2.54-21X17.8MM</footprint>
+      <fields>
+        <field name="Footprint">MOUDLE14P-SMD-2.54-21X17.8MM</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="SEEEDUINO-XIAO-ESP32C3" part="MOUDLE-SEEEDUINO-XIAO-ESP32C3" description=""/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8663e388-4112-4f0d-bfcb-23c5e8eafcb1</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>ULN2003</value>
+      <datasheet>http://www.ti.com/lit/ds/symlink/uln2003a.pdf</datasheet>
+      <description>High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16</description>
+      <fields>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/uln2003a.pdf</field>
+        <field name="Description">High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16</field>
+      </fields>
+      <libsource lib="Transistor_Array" part="ULN2003" description="High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="darlington transistor array"/>
+      <property name="ki_fp_filters" value="DIP*W7.62mm* SOIC*3.9x9.9mm*P1.27mm* SSOP*4.4x5.2mm*P0.65mm* TSSOP*4.4x5mm*P0.65mm* SOIC*W*5.3x10.2mm*P1.27mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03ce165d-7686-41f5-9ea6-12cfbcb67b01</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>LM317L_SOT-89</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/lm317l.pdf</datasheet>
+      <description>100mA 35V Adjustable Linear Regulator, SOT-89</description>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-3</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lm317l.pdf</field>
+        <field name="Description">100mA 35V Adjustable Linear Regulator, SOT-89</field>
+      </fields>
+      <libsource lib="Regulator_Linear" part="LM317L_SOT-89" description="100mA 35V Adjustable Linear Regulator, SOT-89"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="techin514_final_sensor_pcb.kicad_sch"/>
+      <property name="ki_keywords" value="Adjustable Voltage Regulator 1A Positive"/>
+      <property name="ki_fp_filters" value="SOT?89*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2bf8072f-508e-4080-9d82-1dd04cd0e537</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Light emitting diode</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="LED" part="Inolux_IN-PI556FCH">
+      <description>5050 RGB LED 6-Pin with integrated IC</description>
+      <docs>http://www.inolux-corp.com/datasheet/SMDLED/Addressable%20LED/IN-PI556FCH.pdf</docs>
+      <footprints>
+        <fp>LED*WS2812*PLCC*5.0x5.0mm*P1.6mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D2</field>
+        <field name="Value">NeoPixel Digital RGB LED</field>
+        <field name="Footprint">LED_SMD:LED_WS2812_PLCC6_5.0x5.0mm_P1.6mm</field>
+        <field name="Datasheet">http://www.inolux-corp.com/datasheet/SMDLED/Addressable%20LED/IN-PI556FCH.pdf</field>
+        <field name="Description">5050 RGB LED 6-Pin with integrated IC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DO" type="output"/>
+        <pin num="2" name="DIN" type="input"/>
+        <pin num="3" name="VDD" type="power_in"/>
+        <pin num="4" name="NC" type="no_connect"/>
+        <pin num="5" name="VCC" type="power_in"/>
+        <pin num="6" name="GND" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Motor" part="Stepper_Motor_bipolar">
+      <description>4-wire bipolar stepper motor</description>
+      <docs>http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0</docs>
+      <footprints>
+        <fp>PinHeader*P2.54mm*Vertical*</fp>
+        <fp>TerminalBlock*</fp>
+        <fp>Motor*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">Stepper_Motor_bipolar</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0</field>
+        <field name="Description">4-wire bipolar stepper motor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="LM317L_SOT-89">
+      <description>100mA 35V Adjustable Linear Regulator, SOT-89</description>
+      <docs>http://www.ti.com/lit/ds/symlink/lm317l.pdf</docs>
+      <footprints>
+        <fp>SOT?89*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM317L_SOT-89</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-3</field>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/lm317l.pdf</field>
+        <field name="Description">100mA 35V Adjustable Linear Regulator, SOT-89</field>
+      </fields>
+      <pins>
+        <pin num="1" name="ADJ" type="input"/>
+        <pin num="2" name="VO" type="power_out"/>
+        <pin num="3" name="VI" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="SEEEDUINO-XIAO-ESP32C3" part="MOUDLE-SEEEDUINO-XIAO-ESP32C3">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MOUDLE-SEEEDUINO-XIAO-ESP32C3</field>
+        <field name="Footprint">MOUDLE14P-SMD-2.54-21X17.8MM</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="PA02_A0_D0" type="bidirectional"/>
+        <pin num="2" name="PA4_A1_D1" type="bidirectional"/>
+        <pin num="3" name="PA10_A2_D2" type="bidirectional"/>
+        <pin num="4" name="PA11_A3_D3" type="bidirectional"/>
+        <pin num="5" name="PA8_A4_D4_SDA" type="bidirectional"/>
+        <pin num="6" name="PA9_A5_D5_SCL" type="bidirectional"/>
+        <pin num="7" name="PB08_A6_D6_TX" type="bidirectional"/>
+        <pin num="8" name="PB09_A7_D7_RX" type="bidirectional"/>
+        <pin num="9" name="PA7_A8_D8_SCK" type="bidirectional"/>
+        <pin num="10" name="PA5_A9_D9_MISO" type="bidirectional"/>
+        <pin num="11" name="PA6_A10_D10_MOSI" type="bidirectional"/>
+        <pin num="12" name="3V3" type="bidirectional"/>
+        <pin num="13" name="GND" type="bidirectional"/>
+        <pin num="14" name="5V" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="Sensor" part="MAX30102">
+      <description>Heart Rate Sensor, 14-OLGA</description>
+      <docs>https://datasheets.maximintegrated.com/en/ds/MAX30102.pdf</docs>
+      <footprints>
+        <fp>Maxim*OLGA*3.3x5.6mm*P0.8mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MAX30102</field>
+        <field name="Footprint">OptoDevice:Maxim_OLGA-14_3.3x5.6mm_P0.8mm</field>
+        <field name="Datasheet">https://datasheets.maximintegrated.com/en/ds/MAX30102.pdf</field>
+        <field name="Description">Heart Rate Sensor, 14-OLGA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="no_connect"/>
+        <pin num="2" name="SCL" type="input"/>
+        <pin num="3" name="SDA" type="bidirectional"/>
+        <pin num="4" name="PGND" type="power_in"/>
+        <pin num="5" name="NC" type="no_connect"/>
+        <pin num="6" name="NC" type="no_connect"/>
+        <pin num="7" name="NC" type="no_connect"/>
+        <pin num="8" name="NC" type="no_connect"/>
+        <pin num="9" name="VLED+" type="power_in"/>
+        <pin num="10" name="VLED+" type="passive"/>
+        <pin num="11" name="VDD" type="power_in"/>
+        <pin num="12" name="GND" type="power_in"/>
+        <pin num="13" name="~{INT}" type="output"/>
+        <pin num="14" name="NC" type="no_connect"/>
+      </pins>
+    </libpart>
+    <libpart lib="Simulation_SPICE" part="SWITCH">
+      <description>Voltage controlled switch symbol for simulation only</description>
+      <docs>https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Switches</docs>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">SWITCH</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#subsec_Switches</field>
+        <field name="Description">Voltage controlled switch symbol for simulation only</field>
+        <field name="Sim.Device">SW</field>
+        <field name="Sim.Type">V</field>
+        <field name="Sim.Params">thr=0 ron=1</field>
+        <field name="Sim.Pins">1=no+ 2=no- 3=ctrl+ 4=ctrl-</field>
+      </fields>
+      <pins>
+        <pin num="1" name="N+" type="passive"/>
+        <pin num="2" name="N-" type="passive"/>
+        <pin num="3" name="C+" type="input"/>
+        <pin num="4" name="C-" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_Array" part="ULN2003">
+      <description>High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16</description>
+      <docs>http://www.ti.com/lit/ds/symlink/uln2003a.pdf</docs>
+      <footprints>
+        <fp>DIP*W7.62mm*</fp>
+        <fp>SOIC*3.9x9.9mm*P1.27mm*</fp>
+        <fp>SSOP*4.4x5.2mm*P0.65mm*</fp>
+        <fp>TSSOP*4.4x5mm*P0.65mm*</fp>
+        <fp>SOIC*W*5.3x10.2mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ULN2003</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">http://www.ti.com/lit/ds/symlink/uln2003a.pdf</field>
+        <field name="Description">High Voltage, High Current Darlington Transistor Arrays, SOIC16/SOIC16W/DIP16/TSSOP16</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I1" type="input"/>
+        <pin num="2" name="I2" type="input"/>
+        <pin num="3" name="I3" type="input"/>
+        <pin num="4" name="I4" type="input"/>
+        <pin num="5" name="I5" type="input"/>
+        <pin num="6" name="I6" type="input"/>
+        <pin num="7" name="I7" type="input"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="COM" type="passive"/>
+        <pin num="10" name="O7" type="open_collector"/>
+        <pin num="11" name="O6" type="open_collector"/>
+        <pin num="12" name="O5" type="open_collector"/>
+        <pin num="13" name="O4" type="open_collector"/>
+        <pin num="14" name="O3" type="open_collector"/>
+        <pin num="15" name="O2" type="open_collector"/>
+        <pin num="16" name="O1" type="open_collector"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
+    </library>
+    <library logical="LED">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//LED.kicad_sym</uri>
+    </library>
+    <library logical="Motor">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Motor.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Regulator_Linear.kicad_sym</uri>
+    </library>
+    <library logical="SEEEDUINO-XIAO-ESP32C3">
+      <uri>/Users/luciashen/Desktop/TECHIN 514 final project/pcb_design/techin514_final_sensor_pcb/Seeeduino xiao ESP32C3 KiCAD Library/MOUDLE-SEEEDUINO-XIAO-ESP32C3.kicad_sym</uri>
+    </library>
+    <library logical="Sensor">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Sensor.kicad_sym</uri>
+    </library>
+    <library logical="Simulation_SPICE">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Simulation_SPICE.kicad_sym</uri>
+    </library>
+    <library logical="Transistor_Array">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Transistor_Array.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+1V8" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U4" pin="2" pinfunction="VO" pintype="power_out"/>
+    </net>
+    <net code="2" name="+3.3V" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="D2" pin="3" pinfunction="VDD" pintype="power_in"/>
+      <node ref="D2" pin="5" pinfunction="VCC" pintype="power_in"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="VDD" pintype="power_in"/>
+      <node ref="U2" pin="12" pinfunction="3V3" pintype="bidirectional"/>
+      <node ref="U4" pin="3" pinfunction="VI" pintype="power_in"/>
+    </net>
+    <net code="3" name="/SCL" class="Default">
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="SCL" pintype="input"/>
+      <node ref="U2" pin="6" pinfunction="PA9_A5_D5_SCL" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/SDA" class="Default">
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U2" pin="5" pinfunction="PA8_A4_D4_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="D2" pin="6" pinfunction="GND" pintype="power_out"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="4" pinfunction="PGND" pintype="power_in"/>
+      <node ref="U2" pin="13" pinfunction="GND" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="Net-(D1-K)" class="Default">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="7" name="Net-(U1-VLED+-Pad10)" class="Default">
+      <node ref="U1" pin="10" pinfunction="VLED+" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="VLED+" pintype="power_in"/>
+    </net>
+    <net code="8" name="Net-(U1-~{INT})" class="Default">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="~{INT}" pintype="output"/>
+    </net>
+    <net code="9" name="Net-(U4-ADJ)" class="Default">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="ADJ" pintype="input"/>
+    </net>
+    <net code="10" name="unconnected-(D2-DIN-Pad2)" class="Default">
+      <node ref="D2" pin="2" pinfunction="DIN" pintype="input"/>
+    </net>
+    <net code="11" name="unconnected-(D2-DO-Pad1)" class="Default">
+      <node ref="D2" pin="1" pinfunction="DO" pintype="output"/>
+    </net>
+    <net code="12" name="unconnected-(D2-NC-Pad4)" class="Default">
+      <node ref="D2" pin="4" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="13" name="unconnected-(M1---Pad2)" class="Default">
+      <node ref="M1" pin="2" pinfunction="-" pintype="passive"/>
+    </net>
+    <net code="14" name="unconnected-(M1-Pad1)" class="Default">
+      <node ref="M1" pin="1" pintype="passive"/>
+    </net>
+    <net code="15" name="unconnected-(M1-Pad3)" class="Default">
+      <node ref="M1" pin="3" pintype="passive"/>
+    </net>
+    <net code="16" name="unconnected-(M1-Pad4)" class="Default">
+      <node ref="M1" pin="4" pintype="passive"/>
+    </net>
+    <net code="17" name="unconnected-(S1-C+-Pad3)" class="Default">
+      <node ref="S1" pin="3" pinfunction="C+" pintype="input"/>
+    </net>
+    <net code="18" name="unconnected-(S1-C--Pad4)" class="Default">
+      <node ref="S1" pin="4" pinfunction="C-" pintype="input"/>
+    </net>
+    <net code="19" name="unconnected-(S1-N+-Pad1)" class="Default">
+      <node ref="S1" pin="1" pinfunction="N+" pintype="passive"/>
+    </net>
+    <net code="20" name="unconnected-(S1-N--Pad2)" class="Default">
+      <node ref="S1" pin="2" pinfunction="N-" pintype="passive"/>
+    </net>
+    <net code="21" name="unconnected-(U1-NC-Pad1)" class="Default">
+      <node ref="U1" pin="1" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(U1-NC-Pad5)" class="Default">
+      <node ref="U1" pin="5" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U1-NC-Pad6)" class="Default">
+      <node ref="U1" pin="6" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U1-NC-Pad7)" class="Default">
+      <node ref="U1" pin="7" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U1-NC-Pad8)" class="Default">
+      <node ref="U1" pin="8" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(U1-NC-Pad14)" class="Default">
+      <node ref="U1" pin="14" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(U2-5V-Pad14)" class="Default">
+      <node ref="U2" pin="14" pinfunction="5V" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="unconnected-(U2-PA02_A0_D0-Pad1)" class="Default">
+      <node ref="U2" pin="1" pinfunction="PA02_A0_D0" pintype="bidirectional"/>
+    </net>
+    <net code="29" name="unconnected-(U2-PA4_A1_D1-Pad2)" class="Default">
+      <node ref="U2" pin="2" pinfunction="PA4_A1_D1" pintype="bidirectional"/>
+    </net>
+    <net code="30" name="unconnected-(U2-PA5_A9_D9_MISO-Pad10)" class="Default">
+      <node ref="U2" pin="10" pinfunction="PA5_A9_D9_MISO" pintype="bidirectional"/>
+    </net>
+    <net code="31" name="unconnected-(U2-PA6_A10_D10_MOSI-Pad11)" class="Default">
+      <node ref="U2" pin="11" pinfunction="PA6_A10_D10_MOSI" pintype="bidirectional"/>
+    </net>
+    <net code="32" name="unconnected-(U2-PA7_A8_D8_SCK-Pad9)" class="Default">
+      <node ref="U2" pin="9" pinfunction="PA7_A8_D8_SCK" pintype="bidirectional"/>
+    </net>
+    <net code="33" name="unconnected-(U2-PA10_A2_D2-Pad3)" class="Default">
+      <node ref="U2" pin="3" pinfunction="PA10_A2_D2" pintype="bidirectional"/>
+    </net>
+    <net code="34" name="unconnected-(U2-PA11_A3_D3-Pad4)" class="Default">
+      <node ref="U2" pin="4" pinfunction="PA11_A3_D3" pintype="bidirectional"/>
+    </net>
+    <net code="35" name="unconnected-(U2-PB08_A6_D6_TX-Pad7)" class="Default">
+      <node ref="U2" pin="7" pinfunction="PB08_A6_D6_TX" pintype="bidirectional"/>
+    </net>
+    <net code="36" name="unconnected-(U2-PB09_A7_D7_RX-Pad8)" class="Default">
+      <node ref="U2" pin="8" pinfunction="PB09_A7_D7_RX" pintype="bidirectional"/>
+    </net>
+    <net code="37" name="unconnected-(U3-COM-Pad9)" class="Default">
+      <node ref="U3" pin="9" pinfunction="COM" pintype="passive"/>
+    </net>
+    <net code="38" name="unconnected-(U3-GND-Pad8)" class="Default">
+      <node ref="U3" pin="8" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="39" name="unconnected-(U3-I1-Pad1)" class="Default">
+      <node ref="U3" pin="1" pinfunction="I1" pintype="input"/>
+    </net>
+    <net code="40" name="unconnected-(U3-I2-Pad2)" class="Default">
+      <node ref="U3" pin="2" pinfunction="I2" pintype="input"/>
+    </net>
+    <net code="41" name="unconnected-(U3-I3-Pad3)" class="Default">
+      <node ref="U3" pin="3" pinfunction="I3" pintype="input"/>
+    </net>
+    <net code="42" name="unconnected-(U3-I4-Pad4)" class="Default">
+      <node ref="U3" pin="4" pinfunction="I4" pintype="input"/>
+    </net>
+    <net code="43" name="unconnected-(U3-I5-Pad5)" class="Default">
+      <node ref="U3" pin="5" pinfunction="I5" pintype="input"/>
+    </net>
+    <net code="44" name="unconnected-(U3-I6-Pad6)" class="Default">
+      <node ref="U3" pin="6" pinfunction="I6" pintype="input"/>
+    </net>
+    <net code="45" name="unconnected-(U3-I7-Pad7)" class="Default">
+      <node ref="U3" pin="7" pinfunction="I7" pintype="input"/>
+    </net>
+    <net code="46" name="unconnected-(U3-O1-Pad16)" class="Default">
+      <node ref="U3" pin="16" pinfunction="O1" pintype="open_collector"/>
+    </net>
+    <net code="47" name="unconnected-(U3-O2-Pad15)" class="Default">
+      <node ref="U3" pin="15" pinfunction="O2" pintype="open_collector"/>
+    </net>
+    <net code="48" name="unconnected-(U3-O3-Pad14)" class="Default">
+      <node ref="U3" pin="14" pinfunction="O3" pintype="open_collector"/>
+    </net>
+    <net code="49" name="unconnected-(U3-O4-Pad13)" class="Default">
+      <node ref="U3" pin="13" pinfunction="O4" pintype="open_collector"/>
+    </net>
+    <net code="50" name="unconnected-(U3-O5-Pad12)" class="Default">
+      <node ref="U3" pin="12" pinfunction="O5" pintype="open_collector"/>
+    </net>
+    <net code="51" name="unconnected-(U3-O6-Pad11)" class="Default">
+      <node ref="U3" pin="11" pinfunction="O6" pintype="open_collector"/>
+    </net>
+    <net code="52" name="unconnected-(U3-O7-Pad10)" class="Default">
+      <node ref="U3" pin="10" pinfunction="O7" pintype="open_collector"/>
+    </net>
+  </nets>
+</export>
