@@ -134,7 +134,7 @@ Display device pipeline (desk gauge):
 All component datasheets used in this project are available in the `datasheets/` folder:
 
 - [Seeed XIAO ESP32C3](datasheets/Seeed_XIAO_ESP32C3.pdf)
-- [MAX30102 PPG Sensor](datasheets/VL53L1X_ToF_sensor.pdf)
+- [MAX30102 PPG Sensor](datasheets/MAX30102_sensor.pdf)
 - [28BYJ-48 Stepper Motor](datasheets/28BYJ48_stepper_motor.pdf)
 - [ULN2003 Driver](datasheets/ULN2003_driver.pdf)
 - [TP4056 Charger](datasheets/TP4056_charger.pdf)
