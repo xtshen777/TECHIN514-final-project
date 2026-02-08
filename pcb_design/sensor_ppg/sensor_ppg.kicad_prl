@@ -59,7 +59,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "techin514_pcb_design_lab.kicad_prl",
+    "filename": "sensor_ppg.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
@@ -97,7 +97,7 @@
       103,
       74,
       103,
-      0
+      103
     ],
     "custom_group_rules": [],
     "expanded_rows": [],

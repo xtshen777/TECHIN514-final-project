@@ -1,0 +1,43 @@
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+System Parameters (defined by hardware),,,,Profiles (usage of each component mode - defined by software and usage),,,,,,,,,,,
+,form the datasheets,,,,,,,,,,,,,,
+,,,,"""off""","""sensing""","""interactive""",,,,,,,,,
+Processor,ESP32-C3,,,,,,,,,,,,,,
+Active,80,mW,,0%,100%,100%,,,,,,,,,
+Idle,20,mW,,0%,0%,0%,,,,,,,,,
+Sleep,1,mW,,100%,0%,0%,,,,,,,,,
+,,,,,,,,,,,,,,,
+LED,NeoPixel,,,,,,,,,,,,,,
+On,60,mW,,0%,0%,20%,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+Sensor,MAX30102,,,,,,,,,,,,,,
+On,2,mW,,0%,100%,100%,,,,,,,,,
+Idle,1,mW,,0%,0%,0%,,,,,,,,,
+Off,0.01,mW,,100%,0%,0%,,,,,,,,,
+,,,,,,,,,,,,,,,
+Display,no display,,,,,,,,,,,,,,
+On,0,mW,,0%,0%,0%,,,,,,,,,
+Off (leakage),0,mW,,100%,100%,100%,,,,,,,,,
+,,,,,,,,,,,,,,,
+Radio,,,,,,,,,,,,,,,
+Data Rate,1000,bps,,0%,0%,0%,,,,,Total power in profile (mw),,,Maximum Time ,
+Standby Power,50,mW,,0%,0%,40%,,,,,"""off""",1.01,mW,1465.3,hours
+TX Power,200,mW,,0%,0%,40%,,,,,"""sensing""",82,mW,18.0,hours
+RX Power,150,mW,,0%,0%,20%,,,,,"""interactive""",224,mW,6.6,hours
+,,,,,,,,,,,,,,,
+,,,,20,2,2,hours/day typical usage,,,,Effective Battery Capacity,,,,
+Battery,,,,,,,,,,,,1480,mW*h,,
+Capacity,500,mAh,,,,,,,,,,,,,
+Nominal Voltage,3.7,V,,,,,,,,,Days of Use,2.34,days,,
+Regulator Efficiency,80%,,,,,,,,,,Hours of Use,56.18,hours,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+REFLECTIONS : WHAT DID YOU LEARN FROM ANALYZING YOUR POWER.  TALK ABOUT SOME POTENTIAL TRADEOFFS. ,,,,,,,,,,,,,,,
+"I determined the “days of use” metric by modeling how long the device spends in each operating mode per day and combining that with the measured and datasheet-based power consumption. By comparing the total daily energy usage with the effective battery capacity, I estimated the overall runtime in days.
+
+Based on the results, a 500mAh LiPo battery is close to optimal for this device. It comfortably supports more than 24 hours of operation while keeping the device compact and low-cost.
+
+To improve user experience, I could reduce WiFi transmission frequency or increase deep sleep time, trading off real-time data updates for longer battery life. Hardware changes like a more efficient regulator or lower-power radio could further improve performance, but would increase cost and design complexity.",,,,,,,,,,,,,,,

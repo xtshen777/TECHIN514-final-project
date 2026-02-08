@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "MIC5365_1_8YMT_TZ")(type "KiCad")(uri "/Users/luciashen/Desktop/TECHIN 514 final project/pcb_design/models/MIC5365_1_8YMT_TZ")(options "")(descr ""))
+)
